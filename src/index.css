@@ -1,0 +1,139 @@
+/* إعادة تعيين الأنماط الأساسية */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #0f0f0f;
+}
+
+/* تخصيص .imgess (التخطيط الصور) */
+.imgess {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* تخصيص الصور */
+.imgess img {
+  width: 100%; /* جعل الصورة تأخذ عرض الحاوية */
+  max-width: 250px; /* الحد الأقصى لعرض الصورة */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  border-radius: 10px; /* إضافة حدود دائرية للصور */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* إضافة ظل للصورة */
+}
+
+/* تأثير عند تمرير الفأرة على الصورة */
+.imgess img:hover {
+  transform: scale(.9); /* زيادة الحجم بنسبة 10% */
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* تخصيص تفاصيل الفيلم */
+.movie-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #b53b3b;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تخصيص صورة الفيلم */
+.movie-detail-image {
+  flex: 1 1 40%;
+  max-width: 40%;
+  margin-right: 1rem;
+}
+
+.movie-detail-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-detail-info {
+  flex: 1 1 60%;
+}
+
+.movie-detail-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-detail-overview {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.movie-detail-meta {
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* تخصيص مربع البحث */
+#serch {
+  border-right: white;
+  font-size: 20px;
+  border-left: white;
+  border-top: white;
+  color: white;
+  border-bottom-color: black;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  outline: none;
+  justify-self: center;
+}
+
+/* تخصيص القائمة التي تظهر عند البحث */
+ul {
+  display: flex;
+  background-color: #0f0f0f;
+  width: 500px;
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* تخصيص العنصر في القائمة */
+li {
+  border-radius: 20px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  color: white;
+  text-decoration: none;
+}
+
+/* تأثير التمرير على العنصر في القائمة */
+li:hover {
+  background-color: rgba(255, 255, 255, 0.598);
+}
+
+.conten {
+  width: 100%;
+  position: relative;
+}
+
+/* تخصيص الأنماط للأجهزة ذات الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .imgess .movie-item {
+      flex: 1 1 45%;  /* الحفاظ على وضع صورتين بجانب بعض */
+      max-width: 45%;
+  }
+
+  .imgess img {
+      max-width: 200px;  /* تقليص حجم الصورة على الشاشات الصغيرة */
+  }
+}
