@@ -99,9 +99,14 @@ function Imge() {
               onClick={() => handleMovieClick(movie.id)}
               style={{cursor:"pointer"}}
             />
-            {movie.original_title && <h3 style={{ color: "white", whiteSpace: "normal" }}>
+            {movie.original_title && <h3 style={{
+  color: "white",
+  whiteSpace: "normal",
+  wordBreak: "break-word"
+}}>
   {movie.original_title}
 </h3>
+
 }
           </div>
         ))}
@@ -111,4 +116,5 @@ function Imge() {
 }
 
 export default Imge; 
+
 
