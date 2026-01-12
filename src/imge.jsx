@@ -99,7 +99,10 @@ function Imge() {
               onClick={() => handleMovieClick(movie.id)}
               style={{cursor:"pointer"}}
             />
-            {movie.original_title && <h3 style={{color:"white"}}>{movie.original_title}</h3>}
+            {movie.original_title && <h3 style={{ color: "white", whiteSpace: "normal" }}>
+  {movie.original_title}
+</h3>
+}
           </div>
         ))}
       </div>
@@ -108,3 +111,4 @@ function Imge() {
 }
 
 export default Imge; 
+
